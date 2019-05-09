@@ -5,8 +5,8 @@ RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 RUN # Pytorch
 RUN apt-get install -y python-pip
-RUN pip install https://download.pytorch.org/whl/cu100/torch-1.1.0-cp27-cp27mu-linux_x86_64.whl
-RUN pip install torchvision
+RUN pip install --no-cache-dir https://download.pytorch.org/whl/cu100/torch-1.1.0-cp27-cp27mu-linux_x86_64.whl
+RUN pip install --no-cache-dir torchvision
 RUN # OpenCV dependencies
 RUN # ===================
 RUN # Developer tools
